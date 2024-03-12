@@ -4,7 +4,7 @@ if number < 2:
     is_prime_number = False
 else:
      i = 2
-     while i < number: # for to while
+     while i*i < number: # reduce loop operation
         if number % i == 0:
             is_prime_number = False # Remove the plus operation
             break # Exit the loop when the first divisor is found. Performance is improved when the input value is not a prime number
