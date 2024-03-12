@@ -8,7 +8,7 @@ else:
         if number % i == 0:
             is_prime_number = False # Remove the plus operation
             break # Exit the loop when the first divisor is found. Performance is improved when the input value is not a prime number
-        print(i, end=" ")
+        #print(i, end=" ")
         i = i+1
 
 if is_prime_number: # Remove comparision operators
