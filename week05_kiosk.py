@@ -8,11 +8,12 @@ quantity = [0, 0, 0]
 
 menu_lists = ''
 for m in range(len(beverage)):
-    menu_lists = menu_lists + f"{m+1}) {beverage[m]} {prices[m]}won  "
+    menu_lists = menu_lists + f"{m+1}) {beverage[m]} {prices[m]}won   "
+menu_lists = menu_lists + f"{len(beverage)+1}) End order : "
 
 
 while True:
-    menu = input(menu_lists + "4) End order : " )
+    menu = input(menu_lists)
     if menu == '4':
         print("Your order has been accepted.")
         break
