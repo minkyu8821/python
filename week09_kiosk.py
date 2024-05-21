@@ -12,14 +12,18 @@ def select_menu(index):
     quantity[index] = quantity[index] + 1
 
 
-beverage_price = {"americano coffee": 1500, "caffe latte": 2500, "iced tea": 2300}
+beverage_price_quantity = {"americano coffee": [1500,0],
+                  "caffe latte": [2500,0],
+                  "iced tea": [2300,0]
+                  }
 total_price = 0
-quantity = [0, 0, 0]
 
 menu_lists = ''
-for m in range(len(beverage)):
-    menu_lists = menu_lists + f"{m+1}) {beverage[m]} {prices[m]}won   "
-menu_lists = menu_lists + f"{len(beverage)+1}) End order : "
+i = 1
+for k, v in beverage_price_quantity.items():
+    menu_lists = menu_lists + f"{i}) {k} {v[0]}won  "
+    i += 1
+menu_lists = menu_lists + f"{i}) End order : "
 
 
 while True:
@@ -27,7 +31,7 @@ while True:
     if menu == '4':
         print("Your order has been accepted.")
         break
-    elif menu == '1': #jlkjlkjl
+    elif menu == '1':
         select_menu(0)
     elif menu == '2':
         select_menu(1)
