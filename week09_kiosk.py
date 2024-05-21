@@ -1,6 +1,6 @@
 # ISHS CAFE
 # Americano 1500, Latte 2500
-def select_menu(index):
+def select_menu(key):
     """
     display menu, calculate eoeal price and count quantity
     :param key: key of dictionary
@@ -39,9 +39,9 @@ while True:
         select_menu("iced tea")
     else:
         print(f"Menu number {menu} you ordered does not exist. Please choose from the menu.")
-for i in range(len(beverage)):
-    if quantity[i] !=0:
-        print(f"{beverage[i]}\n\t{prices[i]}\tx{quantity[i]}\t{prices[i] * quantity[i]}")
+for k, v in beverage_price_quantity.items():
+    if v[1] !=0:
+        print(f"{k}\n\t{v[0]}\tx{v[1]}\t{v[0] * v[1]}")
 
 print(f"The total amount is {total_price} won.")
 
