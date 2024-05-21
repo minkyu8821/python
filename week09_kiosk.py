@@ -12,8 +12,7 @@ def select_menu(index):
     quantity[index] = quantity[index] + 1
 
 
-beverage = ["americano coffee", "cafe latte", "iced tea"]
-prices = [1500, 2500, 2300]
+beverage_price = {"americano coffee": 1500, "caffe latte": 2500, "iced tea": 2300}
 total_price = 0
 quantity = [0, 0, 0]
 
@@ -41,4 +40,5 @@ for i in range(len(beverage)):
         print(f"{beverage[i]}\n\t{prices[i]}\tx{quantity[i]}\t{prices[i] * quantity[i]}")
 
 print(f"The total amount is {total_price} won.")
+
 
