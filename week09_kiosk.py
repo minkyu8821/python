@@ -54,5 +54,6 @@ for k, v in beverage_price_quantity.items():
         print(f"{k}\n\t{v[0]}\tx{v[1]}\t{v[0] * v[1]}")
 
 print(f"The total amount is {total_price} won.")
+ggg
 
 
